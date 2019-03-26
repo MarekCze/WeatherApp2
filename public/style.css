@@ -1,0 +1,712 @@
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    
+  }
+
+  header{
+    display: flex;
+    height: 150px;
+    background-color: cornflowerblue;
+  }
+
+  header .logo .heading h1{
+    display: block;
+    height: 100%;
+    color: transparent;
+    text-align: center;
+    margin: auto;
+    z-index: 5;
+    bottom: 50px;
+  }
+
+  header .logo .heading h1:hover{
+    color: white;
+    transition: color .7s linear;
+  }
+
+header a{
+  text-decoration: none;
+}
+
+  .logo{
+    position: relative;
+    margin: auto;
+    height: 70px;
+  }
+
+  .logo:hover{
+    height: 100px;
+    transition: height 1s;
+  }
+
+  .heading{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    bottom: 70px;
+    z-index: 4;
+
+  }
+
+  .globe{
+    display: block;
+    margin: auto;
+    z-index: 2;
+    width: auto;
+    height: 100%;
+
+  }
+
+  .globe:hover{
+    width: 100px;
+  }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 300px 10px repeat(7, minmax(50px, 1fr));
+/*    grid-row-gap: 20px; */
+    z-index: 1;
+    text-align: center;
+  }
+
+  .main{
+    grid-column: 2 / -2;
+    grid-row: 1 / -1;
+    height: 1000px;
+    background-image: url("/img/backgroundRED.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+
+.form  {
+    grid-column: 2 / -2;
+    grid-row: 1 / 2;
+    border: none;
+    display: none;
+  }
+
+  .nav-toggle{
+    display: none;
+  }
+
+  .nav-toggle-label{
+    position: absolute;
+    left: 40px;
+    top: 60px;
+  }
+
+  .nav-toggle:checked ~ fieldset {
+    display: block;
+  }
+
+.plainInput{
+  border: solid 2px grey;
+  background-color: white;
+}
+
+  .plainInput, p {
+    display: block;
+    font-weight:300;
+    width: 100%;
+    font-size: 3em;
+    border-radius: 2px;
+    outline: none;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #515151;
+
+    font-family: Open Sans,Verdana;
+    padding: 25px 15px;
+    margin: 30px 0px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  .plainInput:focus {
+    border: solid grey 2px;
+  }
+  .plainButton {
+    font-size: 3em;
+    color: #515151;
+    background-color: rgba(255, 255, 255, 0.5);
+    border:5px solid white;
+    padding:50px 30px;
+    width: 100%;
+    min-width: 350px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  .plainButton:hover {
+    border:8px solid white;
+  }
+
+.city{
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.cityInner{
+  margin-top: auto;
+}
+
+.city h1{
+  color: white;
+  font-size: 3em;
+}
+
+  .temp{
+    grid-column: 1 / 3;
+    grid-row: 4 / 6;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-self: stretch;
+  }
+
+  .temp p{
+    color: white;
+    font-size: 9em;
+  }
+
+  .icon{
+    grid-column: 3 / 5;
+    grid-row: 4 / 6;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-self: stretch;
+    align-self: stretch;
+  }
+
+  .icon p{
+    color: white;
+    font-size: 2.4em;
+    margin: 0;
+  }
+
+  .iconImage{
+    display: block;
+    margin: auto;
+  }
+
+  .windSpeed{
+    grid-column: 1 / 3;
+    grid-row: 6 / 7;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .windSpeed p{
+    color: white;
+    font-size: 2.4em;
+  }
+
+  .windDirection{
+    grid-column: 3 / 5;
+    grid-row: 6 / 7;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .pressure{
+    grid-column: 1 / -1;
+    grid-row: 7 / 8;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .pressure p{
+    color: white;
+    font-size: 2.4em;
+  }
+
+  .humidity{
+    grid-column: 1 / -1;
+    grid-row: 8 / 9;
+    background-color: rgba(0, 0, 0, 0.6);
+
+  }
+
+  .humidity p{
+    color: white;
+    font-size: 2.4em;
+  }
+
+  footer{
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    background-color: cornflowerblue;
+  }
+
+  footer p{
+    color: white;
+    text-align: center;
+    margin: 0;
+  }
+
+  img{
+    width: 200px;
+    height: auto;
+  }
+
+  .windDir{
+    width: 100px;
+    height: auto;
+    margin-top: 50px;
+  }
+
+  .burgerMenu{
+    width: 50px;
+    height: auto;
+  }
+
+/* ----- MEDIA QUERIES ----- */
+
+/* Small smartphones ----------- */
+@media only screen and (max-width : 320px) {
+  .heading h1{
+    font-size: 1.5em;
+  }
+
+  .form  {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  .plainInput{
+    border: solid 2px grey;
+    background-color: white;
+  }
+  
+    .plainInput, p {
+      font-size: 1.5em;
+      padding: 5px;
+      margin: 30px 0px;
+    }
+
+    .plainButton {
+      font-size: 1.5em;
+      color: #515151;
+      border:2px solid white;
+      padding:5px 3px;
+      width: 100%;
+      min-width: 100px;
+    }
+
+  .main{
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    height: 1000px;
+  }
+
+  .city{
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+  }
+  
+  .city h1{
+    color: white;
+    font-size: 1.5em;
+  }
+  
+    .temp{
+      grid-column: 1 / 3;
+      grid-row: 4 / 6;
+    }
+
+    .temp p{
+      color: white;
+      font-size: 2.4em;
+    }
+  
+    .icon{
+      grid-column: 3 / 5;
+      grid-row: 4 / 6;
+    }
+  
+    .icon p{
+      font-size: 1em;
+    }
+  
+    .windSpeed{
+      grid-column: 1 / 3;
+      grid-row: 6 / 7;
+    }
+  
+    .windSpeed p{
+      color: white;
+      font-size: 1em;
+    }
+  
+    .windDirection{
+      grid-column: 3 / 5;
+      grid-row: 6 / 7;
+    }
+  
+    .pressure{
+      grid-column: 1 / -1;
+      grid-row: 7 / 8;
+    }
+  
+    .pressure p{
+      color: white;
+      font-size: 1em;
+    }
+  
+    .humidity{
+      grid-column: 1 / -1;
+      grid-row: 8 / 9;
+  
+    }
+  
+    .humidity p{
+      color: white;
+      font-size: 1em;
+    }
+  
+    img{
+      width: 50px;
+      height: auto;
+    }
+  
+    .windDir{
+      width: 25px;
+      height: auto;
+      margin-top: 50px;
+    }
+  
+    .burgerMenu{
+      width: 50px;
+      height: auto;
+    }
+  }
+
+  /* --- Smartphones ----------- */
+@media only screen and (min-width : 321px) {
+  .heading h1{
+    font-size: 1.5em;
+  }
+
+  .form  {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  .plainInput{
+    border: solid 2px grey;
+    background-color: white;
+  }
+  
+    .plainInput, p {
+      font-size: 1.5em;
+      padding: 15px 5px;
+      margin: 30px 0px;
+    }
+
+    .plainButton {
+      font-size: 1.5em;
+      color: #515151;
+      border:2px solid white;
+      padding:25px 15px;
+      width: 100%;
+      min-width: 100px;
+    }
+
+  .main{
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    height: 1000px;
+  }
+
+  .city{
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+  }
+  
+  .city h1{
+    color: white;
+    font-size: 2em;
+  }
+  
+    .temp{
+      grid-column: 1 / 3;
+      grid-row: 4 / 6;
+    }
+
+    .temp p{
+      color: white;
+      font-size: 3.5em;
+    }
+  
+    .icon{
+      grid-column: 3 / 5;
+      grid-row: 4 / 6;
+    }
+  
+    .icon p{
+      font-size: 1.5em;
+    }
+  
+    .windSpeed{
+      grid-column: 1 / 3;
+      grid-row: 6 / 7;
+    }
+  
+    .windSpeed p{
+      color: white;
+      font-size: 1.5em;
+    }
+  
+    .windDirection{
+      grid-column: 3 / 5;
+      grid-row: 6 / 7;
+    }
+  
+    .pressure{
+      grid-column: 1 / -1;
+      grid-row: 7 / 8;
+    }
+  
+    .pressure p{
+      color: white;
+      font-size: 1.5em;
+    }
+  
+    .humidity{
+      grid-column: 1 / -1;
+      grid-row: 8 / 9;
+  
+    }
+  
+    .humidity p{
+      color: white;
+      font-size: 1.5em;
+    }
+  
+    img{
+      width: 100px;
+      height: auto;
+    }
+  
+    .windDir{
+      width: 50px;
+      height: auto;
+      margin-top: 50px;
+    }
+  
+    .burgerMenu{
+      width: 50px;
+      height: auto;
+    }
+  }
+
+  /* --- Tablets ----------- */
+  @media only screen and (min-width : 620px) {
+    .heading h1{
+      font-size: 3em;
+    }
+
+    .main{
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      height: 1000px;
+    }
+  
+    .city{
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+    }
+    
+    .city h1{
+      color: white;
+      font-size: 3em;
+    }
+    
+      .temp{
+        grid-column: 1 / 3;
+        grid-row: 4 / 6;
+      }
+  
+      .temp p{
+        color: white;
+        font-size: 6em;
+      }
+    
+      .icon{
+        grid-column: 3 / 5;
+        grid-row: 4 / 6;
+      }
+    
+      .icon p{
+        font-size: 2em;
+      }
+    
+      .windSpeed{
+        grid-column: 1 / 3;
+        grid-row: 6 / 7;
+      }
+    
+      .windSpeed p{
+        color: white;
+        font-size: 2em;
+      }
+    
+      .windDirection{
+        grid-column: 3 / 5;
+        grid-row: 6 / 7;
+      }
+    
+      .pressure{
+        grid-column: 1 / -1;
+        grid-row: 7 / 8;
+      }
+    
+      .pressure p{
+        color: white;
+        font-size: 2em;
+      }
+    
+      .humidity{
+        grid-column: 1 / -1;
+        grid-row: 8 / 9;
+    
+      }
+    
+      .humidity p{
+        color: white;
+        font-size: 2em;
+      }
+    
+      img{
+        width: 140px;
+        height: auto;
+      }
+    
+      .windDir{
+        width: 75px;
+        height: auto;
+        margin-top: 50px;
+      }
+    
+      .burgerMenu{
+        width: 50px;
+        height: auto;
+      }
+    }
+
+  /* --- Laptops And Desktops ----------- */
+@media only screen and (min-width : 1224px) {
+  .form  {
+    grid-column: 2 / -2;
+    grid-row: 1 / 2;
+  }
+
+  .plainInput{
+    border: solid 3px grey;
+    background-color: white;
+  }
+  
+    .plainInput, p {
+      font-size: 3em;
+      padding: 20px 10px;
+      margin: 30px 0px;
+    }
+
+    .plainButton {
+      font-size: 3em;
+      padding:30px 20px;
+      width: 100%;
+      min-width: 100px;
+    }
+
+    .main{
+      grid-column: 2 / -2;
+      grid-row: 1 / -1;
+      height: 1000px;
+    }
+  
+    .city{
+      grid-column: 2 / -2;
+      grid-row: 3 / 4;
+    }
+    
+    .city h1{
+      color: white;
+      font-size: 4em;
+    }
+    
+      .temp{
+        grid-column: 2 / 3;
+        grid-row: 4 / 6;
+      }
+  
+      .temp p{
+        color: white;
+        font-size: 9em;
+      }
+    
+      .icon{
+        grid-column: 3 / 4;
+        grid-row: 4 / 6;
+      }
+    
+      .icon p{
+        font-size: 2.4em;
+      }
+    
+      .windSpeed{
+        grid-column: 2 / 3;
+        grid-row: 6 / 7;
+      }
+    
+      .windSpeed p{
+        color: white;
+        font-size: 2.4em;
+      }
+    
+      .windDirection{
+        grid-column: 3 / 4;
+        grid-row: 6 / 7;
+      }
+    
+      .pressure{
+        grid-column: 2 / -2;
+        grid-row: 7 / 8;
+      }
+    
+      .pressure p{
+        color: white;
+        font-size: 2.4em;
+      }
+    
+      .humidity{
+        grid-column: 2 / -2;
+        grid-row: 8 / 9;
+    
+      }
+    
+      .humidity p{
+        color: white;
+        font-size: 2.4em;
+      }
+    
+      img{
+        width: 200px;
+        height: auto;
+      }
+    
+      .windDir{
+        width: 100px;
+        height: auto;
+        margin-top: 50px;
+      }
+    
+      .burgerMenu{
+        width: 50px;
+        height: auto;
+      }
+    }

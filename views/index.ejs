@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+  </head>
+  <body>
+      
+    <header>
+      <a href="/">
+      <div class="logo"><img class="globe" src="img/earth-globe.svg">
+        <div class="heading">
+          <h1>World Weather App</h1>
+        </div>
+      </a>      
+    </div>          
+    </header> 
+    <div class="container">
+      <div class="main">  
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" checked>
+          <label for="nav-toggle" class="nav-toggle-label"><img class="burgerMenu" src="img/menu(1).png"></label> 
+      <fieldset class="indexFieldset">
+        <form action="/" method="post">
+          <input name="city" type="text" class="plainInput" id="cityInput" placeholder="Enter a City" required>
+          <input type="submit" class="plainButton" id="weatherButton" value="Get Weather">
+        </form>        
+      </fieldset>
+    </div>    
+    </div>
+    <footer>
+      <p>Marek Czerniejeski<br>K00231569<br>Front End Development</p>
+    </footer>
+  
+  </body>
+</html>

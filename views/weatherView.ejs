@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+  </head>
+  <body>
+    <header>
+      <a href="/">
+      <div class="logo"><img class="globe" src="img/earth-globe.svg">
+        <div class="heading">
+          <h1>World Weather App</h1>
+        </div>
+      </a>      
+    </div>          
+    </header> 
+      <% if(error !== null){ %>
+        <p><%= error %></p>
+      <% } %>
+      <% if(weather !== null){ %>
+    <div class="container" style="background-image: url(<%= photos %>); no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">          
+          <div class="city">
+
+            <h1><%= city %>, <%= country %></h1>
+
+          </div>
+          <div class="temp">
+
+              <p><%= weather %>&deg;C</p>
+
+          </div>
+          <div class="icon">
+
+              <img class="iconImage" src="<%= ic %>">
+              <p><%= des %></p>
+
+          </div>
+          <div class="windSpeed">
+            <p>Wind Speed<br><%= ws %> km/h</p>
+          </div>
+          <div class="windDirection">
+            <img class="windDir" src="<%= wd %>">
+          </div>
+          <div class="pressure">
+            <p>Atmospheric pressure<br><%= h %>hPa</p>
+          </div>
+          <div class="humidity">
+            <p>Humidity<br><%= h %>%</p>
+          </div>
+          <% } %>         
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" checked>
+          <label for="nav-toggle" class="nav-toggle-label"><img class="burgerMenu" src="img/menu(1).png"></label> 
+        <fieldset class="form">
+        <form action="/" method="post">
+          <input name="city" type="text" class="plainInput" id="cityInput" placeholder="Enter a City" required>
+          <input type="submit" class="plainButton" id="weatherButton" value="Get Weather">
+        </form>        
+      </fieldset>
+           
+    </div>
+    <footer>
+      <p>Marek Czerniejeski<br>K00231569<br>Front End Development</p>
+    </footer>
+  </body>
+</html>
